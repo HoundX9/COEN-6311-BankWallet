@@ -8,7 +8,7 @@
 8. Remove limitations for instances?
 9. Work on showMembers() - removed
 10. Add comments - done
-11. Add docstrings
+11. Add docstrings - done
 12. Create Report
 13. Try to complete functions with return instead of print - in progress
 14. How to make child request access atleast 2 times? - acheived
