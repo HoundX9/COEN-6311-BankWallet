@@ -1,0 +1,18 @@
+1. Work on BankWallet class (especially updateLedger()) - done
+2. Transfer working of depositing, withdrawing, etc. from main.py to Parent in parent.py - done
+3. Work on getStatement (how it works with ledger{}) - done
+4. Work on processing request - partially done
+5. Work on Child class (and startChild() in main.py) - done
+6. How to notify parents? - done
+7. Make ledger to dataframe - tried - Display dictionary with a for loop
+8. Remove limitations for instances?
+9. Work on showMembers() - removed
+10. Add comments - done
+11. Add docstrings
+12. Create Report
+13. Try to complete functions with return instead of print - in progress
+14. How to make child request access atleast 2 times? - acheived
+15. Compare code and UML diagrams - permission count in UML, showMembers() in BW, processRequest() in Parent - take care of
+16. Complete pcbw_info - done
+17. Function for children to request money deposit from parents and apply in UML. - done
+18. How to get around circular imports?
