@@ -38,7 +38,7 @@ class BankWallet:
 
         member_name (string - Parameter that holds the name of the user involved in a transaction
 
-        message (optional) - Parameter that holds the details of a transaction input by a user
+        message (optional) - Parameter that holds the details of a transaction input by a user; default value is an empty string ""
         """
 
         #Access corresponding member by indexing the corresponding key in the ledger dictionary
@@ -83,6 +83,8 @@ class Parent:
         """
         Function to deposit money into the wallet.
 
+        user (obj) - Parameter that refers to the object accessing the Parent.deposit() function
+
         deposit_input (int) - Parameter that holds the value of the money to be deposited
         """
         BankWallet.wallet_balance += deposit_input # Increase the money in wallet by deposit_input
@@ -96,6 +98,8 @@ class Parent:
     def withdraw(user,withdraw_input):
         """
         Function to withdraw money from the bank wallet.
+
+        user (obj) - Parameter that refers to the object accessing the Parent.withdraw() function
 
         withdraw_input (int) - Parameter that holds the value of the money to be withdrawn
         """
