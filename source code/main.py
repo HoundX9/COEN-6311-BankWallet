@@ -153,7 +153,7 @@ def startDad():
             print("Invalid Input...")
 
     elif dad_input == 6:
-        # Blocking a member depends on the ID of that member.
+        # Unblocking a member depends on the ID of that member.
         id_select = int(input("Enter ID of Member you want to select:[(0 for Mom) or (1-8) for a child]: "))
         if id_select == 0:
             dad.unblockMember(mom)
