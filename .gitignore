@@ -1,6 +1,7 @@
 parent_test.py
 wallet_details.txt
 *.mdj
+*.docx
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
