@@ -110,7 +110,7 @@ def startDad():
     Takes no input parameters.
     """
     print("Hello Dad. What do you need?")
-    print("1. Deposit Money\n2. Withdraw Money\n3. Read Statment(s)\n4. See available balance\n5. Block a member")
+    print("1. Deposit Money\n2. Withdraw Money\n3. Read Statment(s)\n4. See available balance\n5. Block a member\n6. Unblock a member")
     dad_input = int(input("Enter your choice: "))
     if dad_input == 1:
         deposit_input = int(input("User OK. Please enter amount to deposit."))
@@ -151,6 +151,30 @@ def startDad():
             dad.blockMember(c8)   
         else:
             print("Invalid Input...")
+
+    elif dad_input == 6:
+        # Blocking a member depends on the ID of that member.
+        id_select = int(input("Enter ID of Member you want to select:[(0 for Mom) or (1-8) for a child]: "))
+        if id_select == 0:
+            dad.unblockMember(mom)
+        elif id_select == 1:
+            dad.unblockMember(c1)
+        elif id_select == 2:
+            dad.unblockMember(c2)
+        elif id_select == 3:
+            dad.unblockMember(c3)
+        elif id_select == 4:
+            dad.unblockMember(c4)
+        elif id_select == 5:
+            dad.unblockMember(c5)
+        elif id_select == 6:
+            dad.unblockMember(c6)
+        elif id_select == 7:
+            dad.unblockMember(c7)
+        elif id_select == 8:
+            dad.unblockMember(c8)   
+        else:
+            print("Invalid Input...")    
 
 def child_options(child_id):
     """

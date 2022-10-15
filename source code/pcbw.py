@@ -126,7 +126,7 @@ class Parent:
         else:
             return False
 
-    def getStatement():
+    def getStatement(self):
         """
         Function that will display all the transactions made in current program lifecycle. Only a 
         Parent instance has access (dad and mom). Can be used to show the entire ledger or only the
@@ -233,11 +233,11 @@ class Dad(Parent):
         # Unblock a member from accessing the wallet
         if other_member.access_value > 0:
             return f"{other_member.name} already has access."
-        elif other_member.isinstance(Mom): # Check if the member is an instance of Mom class
+        elif isinstance(other_member,Mom): # Check if the member is an instance of Mom class
             other_member.access_value = 2
         else:
             other_member.access_value = 1
-        return f"{other_member.name} has been unblocked, and can now access the wallet."    
+        print(f"{other_member.name} has been unblocked, and can now access the wallet."    )
     
     def processRequestMom(child_name, child_message, more_than_fifty):
         """
@@ -253,7 +253,7 @@ class Dad(Parent):
 
         more_than_fifty (int) - Parameter that holds the amount requested by the child whose value should be greater than 50
         """
-        print(f"Hello Dad, you have been transferred a request from Mom regarding {child_name} who wants to withdraw {more_than_fifty} for the following reason:\n{child_message}")
+        print(f"Hello Dad, you have been transferred a request from Mom regarding {child_name} who wants to withdraw ${more_than_fifty} for the following reason:\n{child_message}")
         dad_choice = int(input("You can choose one of the following:\n1. Accept\n2. Reject\nEnter your choice here: "))
         if dad_choice == 1:
             return True
@@ -298,7 +298,7 @@ class Mom(Parent):
 
         more_than_fifty (int) - Parameter that holds the amount requested by the child whose value should be greater than 50
         """
-        print(f"Hello Mom, you have a request from {child_name} to withdraw {more_than_fifty} for the following reason:\n{child_message}")
+        print(f"Hello Mom, you have a request from {child_name} to withdraw ${more_than_fifty} for the following reason:\n{child_message}")
         mom_choice = int(input("You can choose one of the following:\n1. Accept\n2. Reject\n3. Transfer Request to Dad\nEnter your choice here: "))
         if mom_choice == 1:
             return 1
