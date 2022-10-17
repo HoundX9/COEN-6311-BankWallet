@@ -60,7 +60,7 @@ class BankWallet:
         Function that displays a warning message whenever money in the wallet falls below $100.
         """
         if BankWallet.wallet_balance < 100:
-            print("BALANCE BELOW $100. ACTION REQUIRED!!")
+            print("----BALANCE BELOW $100----ACTION REQUIRED!!----")
 
     def __str__(self):
         return f"The Bank Wallet has ${BankWallet.wallet_balance} available in the balance and is conntected to a bank account which holds ${BankWallet.bank_acc}"
@@ -372,15 +372,18 @@ class Child:
             print(f"Remaining Balance in Wallet : ${BankWallet.wallet_balance}.")
             BankWallet.wallet_balance -= more_than_fifty
             BankWallet.updateLedger('w',more_than_fifty,self.name,child_message)
+            BankWallet.notifyParents()
         elif mom_repsonse == 2:
             print("Sorry access was denied by Mom.")
             self.access_deny_count += 1
         elif mom_repsonse == 3: # Mom can choose to transfer request to Dad
             dad_response = Dad.processRequestMom(self.name, child_message, more_than_fifty)
             if dad_response :
+                BankWallet.wallet_balance -= more_than_fifty
                 print(f"Hello {self.name}, you have been granted access. Withdrawing {more_than_fifty}")
                 print(f"Remaining Balance in Wallet : ${BankWallet.wallet_balance}.")
                 BankWallet.updateLedger('w',more_than_fifty,self.name,child_message)
+                BankWallet.notifyParents()
             elif dad_response == False:
                 print("Sorry access was denied by Dad.")
                 self.access_deny_count += 1
