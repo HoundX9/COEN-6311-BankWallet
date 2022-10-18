@@ -14,4 +14,4 @@ A Child, whose access was denied twice will not be able to access the wallet unt
 Four diagram types have been used to depict the various types of interactions involved created using StarUML2.0 - Use Case Diagram, Flowchart Diagram, Class Diagram and Sequence Diagram all of which havee been uploaded to the repository for viewing.
 
 #### Activity Plan and Report
-A detailed table showing the activity report followed has been uploaded to the repository as well. Please refer to the "Activity Report.pdf" and "Relation between UML and Code.pdf" files for information
+A detailed table showing the activity report followed has been uploaded to the repository as well. Please refer to the "Activity Report.pdf" and "Relation between UML and Code.pdf" files for further information.
